@@ -57,6 +57,9 @@ const Hero = () => {
               data-aos="zoom-in"
               data-aos-delay="300"
               className="w-full sm:w-auto px-6 py-2 border-2 border-[#7849d5] bg-[#13071f] text-[#7849d5] transition-all duration-300 cursor-pointer rounded-full text-base md:text-md font-semibold flex items-center justify-center group hover:bg-[#7849d5] hover:text-white shadow-lg shadow-[#7849d5]/10"
+              onClick={() => {
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               <span>View My Projects</span>
               <BsArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
