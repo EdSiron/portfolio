@@ -23,11 +23,15 @@ const Projects = () => {
       </h1>
 
       <div className="w-[90%] md:w-[80%] xl:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-16">
-        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          className="flex h-full"
+        >
           <ProjectCard
             image="/images/p1.png"
             title="Vido - Movie App"
-            description={`Vido is a dynamic movie discovery platform that leverages the TMDB API to provide real-time data on thousands of films. By integrating Appwrite for search analytics, the app displays "Trending Now" insights based on real-time user activity.`}
+            description="Vido is a dynamic movie discovery platform that leverages the TMDB API to provide real-time data on thousands of films. By integrating Appwrite for search analytics, the app displays 'Trending Now' insights."
             techIcons={[FaReact, SiVite, SiTailwindcss, SiAppwrite]}
             gitHubUrl="https://github.com/EdSiron/movie-app"
             liveUrl="https://edsiron.github.io/movie-app/"
@@ -38,6 +42,7 @@ const Projects = () => {
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
+          className="flex h-full"
         >
           <ProjectCard
             image="/images/p2.png"
@@ -53,11 +58,12 @@ const Projects = () => {
           data-aos="fade-up"
           data-aos-delay="400"
           data-aos-anchor-placement="top-bottom"
+          className="flex h-full"
         >
           <ProjectCard
             image="/images/p3.png"
             title="Real-Time Chat App (MERN Stack)"
-            description="A feature-rich real-time communication platform featuring live messaging, user status tracking, and secure authentication. Built with MongoDB, Express.js, React, and Node.js, styled with Tailwind CSS."
+            description="A feature-rich real-time communication platform featuring live messaging, user status tracking, and secure authentication. Built with MongoDB, Express.js, React, and Node.js."
             techIcons={[SiMongodb, SiExpress, FaReact, FaNodeJs]}
             gitHubUrl="https://github.com/EdSiron/Mern-Chat-App"
             isOngoing={true}
