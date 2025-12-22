@@ -31,7 +31,7 @@ const Home = () => {
       <section id="home" className="scroll-mt-[12vh]"><Hero /></section>
       <section id="projects" className="scroll-mt-[12vh]"><Projects /></section>
       <section id="services" className="scroll-mt-[12vh]"><Services /></section>
-      <section id="reviews" className="scroll-mt-[12vh]"><ClientReview /></section>
+      {/* <section id="reviews" className="scroll-mt-[12vh]"><ClientReview /></section> */}
       <section id="skills" className="scroll-mt-[12vh]"><Skills /></section>
       <section id="resume" className="scroll-mt-[12vh]"><Resume /></section>
       <section id="contact" className="scroll-mt-[12vh]"><Contact /></section>
