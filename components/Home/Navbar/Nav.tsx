@@ -52,10 +52,12 @@ const Nav = ({ openNav }: Props) => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="px-8 py-3 text-sm font-semibold cursor-pointer rounded-full bg-linear-to-r from-[#7849d5] to-[#2d165f] text-white flex items-center space-x-2 hover:scale-105 transition-all duration-300 shadow-md shadow-[#2d165f]/50">
+        <a href="/resume.pdf" download="Ed_Mark_Angelo_Siron_Resume.pdf">
+          <button className="px-8 py-3 text-sm font-semibold cursor-pointer rounded-full bg-linear-to-r from-[#7849d5] to-[#6d31ee] text-white flex items-center space-x-2 hover:scale-105 transition-all duration-300 shadow-md shadow-[#2d165f]/50">
             <BiDownload className="w-5 h-5" />
             <span>Download CV</span>
           </button>
+        </a>
 
           <HiOutlineMenuAlt3
             onClick={openNav}

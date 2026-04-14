@@ -49,7 +49,7 @@ const Footer = () => {
               Ed<span className="text-[#7849d5]">Siron</span>
             </h3>
             <p className="text-xs text-gray-500 mt-1">
-              Associate Systems Developer & Designer
+              Associate Software Developer & Designer
             </p>
           </div>
           <p className="text-xs text-gray-500 mt-1">

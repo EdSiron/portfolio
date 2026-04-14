@@ -22,39 +22,41 @@ const ProjectCard = ({
   isOngoing,
 }: Props) => {
   return (
-    <div className="relative group">
-      <div className="absolute -inset-0.5 bg-linear-to-r from-[#7849d5] to-[#2d165f] rounded-xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
-      <div className="relative bg-[#140b1c] p-5 rounded-xl border border-[#2d165f] flex flex-col h-full leading-none">
-        {isOngoing && (
-          <span className="absolute top-8 right-8 bg-[#7849d5]/20 text-[#7849d5] text-xs font-bold px-3 py-1 rounded-full border border-[#7849d5]/40 backdrop-blur-md z-10">
-            Ongoing
-          </span>
-        )}
+    <div className="project-card group relative overflow-hidden rounded-2xl cursor-pointer w-full h-full">
+      {/* Background image */}
+      <Image
+        src={image}
+        alt={title}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+        className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:blur-sm group-hover:brightness-50"
+      />
 
-        <Image
-          src={image}
-          alt={title}
-          width={400}
-          height={400}
-          className="rounded-lg w-full object-cover border border-[#2d165f]/50"
-        />
+      {/* Ongoing badge */}
+      {isOngoing && (
+        <span className="absolute top-4 right-4 z-20 bg-[#7849d5]/80 text-white text-xs font-bold px-3 py-1 rounded-full border border-[#7849d5] backdrop-blur-md">
+          Ongoing
+        </span>
+      )}
 
-        <h1 className="mt-4 text-xl sm:text-2xl font-bold text-[#ffffff]">
-          {title}
-        </h1>
+      {/* Default state: title at bottom */}
+      <div className="absolute inset-0 z-10 flex flex-col justify-end p-5 bg-linear-to-t from-black/70 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-0">
+        <h2 className="text-white text-lg font-bold leading-tight">{title}</h2>
+      </div>
 
-        <p className="pt-2 font-medium text-[#ffffff]/70 leading-relaxed">
-          {description}
-        </p>
+      {/* Hover state: full overlay with description + links */}
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-start p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <h2 className="text-white text-xl font-bold mb-3 leading-tight">{title}</h2>
+        <p className="text-white/80 text-sm leading-relaxed mb-5">{description}</p>
 
-        <div className="flex items-center justify-between mt-auto pt-8">
+        <div className="flex items-center justify-between w-full mt-auto">
           <div className="flex items-center gap-2">
             {techIcons.map((Icon, index) => (
               <div
                 key={index}
-                className="p-2 bg-[#2d165f]/40 rounded-lg border border-[#7849d5]/30 flex items-center justify-center transition-colors hover:border-[#7849d5]"
+                className="p-1.5 bg-[#2d165f]/60 rounded-lg border border-[#7849d5]/40 flex items-center justify-center"
               >
-                <Icon className="text-[#7849d5] text-xl" />
+                <Icon className="text-[#a98af0] text-base" />
               </div>
             ))}
           </div>
@@ -65,9 +67,10 @@ const ProjectCard = ({
                 href={gitHubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#ffffff]/80 hover:text-[#7849d5] transition-colors"
+                className="text-white/80 hover:text-[#7849d5] transition-colors"
+                onClick={(e) => e.stopPropagation()}
               >
-                <FaGithub size={24} />
+                <FaGithub size={22} />
               </a>
             )}
             {liveUrl && (
@@ -75,9 +78,10 @@ const ProjectCard = ({
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#ffffff]/80 hover:text-[#7849d5] transition-colors"
+                className="text-white/80 hover:text-[#7849d5] transition-colors"
+                onClick={(e) => e.stopPropagation()}
               >
-                <FaExternalLinkAlt size={20} />
+                <FaExternalLinkAlt size={18} />
               </a>
             )}
           </div>

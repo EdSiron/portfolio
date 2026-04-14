@@ -20,7 +20,7 @@ const Resume = () => {
             <div className="absolute left-5 sm:left-6 top-4 bottom-4 w-0.5 bg-linear-to-b from-[#7849d5] via-[#2d165f] to-transparent"></div>
             <div data-aos="fade-up" data-aos-delay="200" className="mb-8">
               <ResumeCard
-                role="Associate Systems Developer"
+                role="Associate Software Developer"
                 date="Jan 2025 - Present"
                 icon={<FaBriefcase size={18} />}
                 description="Full-stack development specializing in modernizing enterprise systems and maintaining robust backend architectures."
