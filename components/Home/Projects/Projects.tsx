@@ -13,13 +13,13 @@ import {
 
 const projects = [
   {
-    image: "/images/p4.png",
-    title: "The Cozy Oven by EL",
+    image: "/images/p4_new.png",
+    title: "BakeKeeper - Recipe Manager",
     description:
       "A full-featured recipe website for a small business with admin access covering recipes, inventory, orders, and a reports dashboard — built to streamline daily bakery operations.",
     techIcons: [SiNextdotjs, SiTypescript, SiTailwindcss],
-    gitHubUrl: "https://github.com/EdSiron/thecozyoven.byel",
-    liveUrl: "https://thecozyoven-byel.vercel.app/",
+    gitHubUrl: "https://github.com/EdSiron/bakekeeper",
+    liveUrl: "https://bakekeeper-three.vercel.app/",
   },
   {
     image: "/images/p1.png",
