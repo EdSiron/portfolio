@@ -32,7 +32,7 @@ const projects = [
   },
 
   {
-    image: "/images/p6.png",
+    image: "/images/p6_new.png",
     title: "ProfilPro",
     description:
       "A clean, focused resume builder that lets users craft a polished, professional resume using a carefully designed single template — no clutter, just results.",
